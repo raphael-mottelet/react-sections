@@ -10,7 +10,7 @@ const Section = ({ backgroundColor, children }) => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } // Change this threshold as needed
+      { threshold: 0.5 }
     );
 
     observer.observe(sectionRef.current);
@@ -26,7 +26,7 @@ const Section = ({ backgroundColor, children }) => {
       className={`section ${isVisible ? 'visible' : ''}`}
       style={{
         backgroundColor,
-        transition: 'opacity 1s ease-in-out' // Slow down the transition
+        transition: 'opacity 1s ease-in-out'
       }}
     >
       <div className="section-content">
